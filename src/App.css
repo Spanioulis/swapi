@@ -1,38 +1,92 @@
-.App {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  background-color: black;
+  color: #A6A6A6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  /* position: relative; */
+  border-bottom: 1px #A6A6A6 solid;
+}
+
+img {
+  width: 20%;
+}
+
+.sign {
+  position: absolute;
+  top: 3.5rem;
+  right: 5rem;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
   text-align: center;
+  border-bottom: 1px #A6A6A6 solid;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.link-home {
+  padding: 1rem;
+  width: auto;
+  height: 100%;
+  border-right: 1px #A6A6A6 solid;
+  border-left: 1px #A6A6A6 solid;
+  display: flex;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.link-home:hover {
+  border-bottom: 3px navy solid;
+  color: antiquewhite;
+  font-weight: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.link-starships {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  width: auto;
+  height: 100%;
+  border-right: 1px #A6A6A6 solid;
+}
+
+.link-starships:hover {
+  border-bottom: 3px navy solid;
+  color: antiquewhite;
+  font-weight: bold;
+}
+
+.starships-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 2rem
+}
+
+.starship {
+  background-color: #141414;
+  color: #A6A6A6;
+  margin-bottom: 1.3rem;
+  border-radius: 2px;
+  width: 800px;
+  height: 70px;
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
