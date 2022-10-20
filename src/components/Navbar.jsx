@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../assets/images/star-wars-2.png';
-import '../App.css';
+import '../styles/Navbar.css';
 import { NavLink } from 'react-router-dom';
 
 export const Navbar = () => {
@@ -14,8 +14,15 @@ export const Navbar = () => {
                 </div>
             </div>
             <div className="nav-link">
-                <p className="link-home">HOME</p>
-                <NavLink to="/starships" className="link-starships">
+                {/* Idea: ¿className .active-home?? */}
+                <NavLink to="/" className={({ isActive }) => (isActive ? 'inactive' : '')}>
+                    HOME
+                </NavLink>
+                <NavLink
+                    className={({ isActive }) => (isActive === true ? 'active' : 'inactive')}
+                    to="/starships"
+                    end
+                >
                     STARSHIPS
                 </NavLink>
             </div>
