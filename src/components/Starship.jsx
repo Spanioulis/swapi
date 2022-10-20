@@ -57,8 +57,8 @@ export const Starship = () => {
                     <InfoP>Model: {starship.model}</InfoP>
                     <InfoP>Manufacturer: {starship.manufacturer}</InfoP>
                     <InfoP>Cost in credits: {starship.cost_in_credits}</InfoP>
-                    <InfoP>Length: {starship.length}</InfoP>
-                    <InfoP>Atmospheric Speed: {starship.max_atmosphering_speed}</InfoP>
+                    <InfoP>Length: {starship.length}m</InfoP>
+                    <InfoP>Atmospheric Speed: {starship.max_atmosphering_speed}mph</InfoP>
                     <InfoP>Crew: {starship.crew}</InfoP>
                 </Info>
                 <Info></Info>
