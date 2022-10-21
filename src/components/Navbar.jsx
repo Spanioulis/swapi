@@ -15,7 +15,10 @@ export const Navbar = () => {
             </div>
             <div className="nav-link">
                 {/* Idea: ¿className .active-home?? */}
-                <NavLink to="/" className={({ isActive }) => (isActive ? 'inactive' : '')}>
+                <NavLink
+                    to="/home"
+                    className={({ isActive }) => (isActive ? 'inactive' : 'inactive')}
+                >
                     HOME
                 </NavLink>
                 <NavLink

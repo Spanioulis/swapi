@@ -13,12 +13,12 @@ import {
 import notFound from '../assets/images/404NotFound.png';
 
 export const Starship = () => {
-    let idStarship = useParams().id;
+    let { id } = useParams();
     // console.log('Props params: ', idStarship);
     // console.log('Props params: ', param);
     // const API_URL = `https://swapi.dev/api/starships/17/`;
-    const API_URL = `https://swapi.dev/api/starships/${idStarship}/`;
-    const img = `https://starwars-visualguide.com/assets/img/starships/${idStarship}.jpg`;
+    const API_URL = `https://swapi.dev/api/starships/${id}/`;
+    const img = `https://starwars-visualguide.com/assets/img/starships/${id}.jpg`;
     // console.log(img);
     const [starship, setStarship] = useState([]);
     // console.log('🚀 ~ starship', starship);
