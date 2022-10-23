@@ -8,7 +8,7 @@ export const Home = () => {
         <>
             <div className="home-container">
                 <Link to="/starships" className="btn-home">
-                    <img src={icon} alt="" srcset="" />
+                    <img src={icon} alt="Starships Icon" />
                     <i> Starships</i>
                 </Link>
             </div>

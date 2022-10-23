@@ -1,14 +1,9 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 .home-container {
     background: url(../assets/images/star-wars-backgrounds-28.jpg);
     background-size: cover;
     background-position: initial;
     background-attachment: scroll;
+    /* background-attachment: fixed; */
     align-items: center;
     display: flex;
     justify-content: center;
@@ -30,6 +25,7 @@
     transition: all 150ms ease-in-out;
     width: 200px;
     padding: 0.7rem;
+    position: fixed;
 }
 
 .btn-home:hover {

@@ -31,11 +31,12 @@ export const Starship = () => {
                 // console.log(data);
                 setStarship(data);
             });
+        window.scrollTo(0, 0);
     }, [API_URL]);
 
     return (
-        <StarshipContainer className="container">
-            <Card className="card">
+        <StarshipContainer>
+            <Card>
                 <Img
                     src={img}
                     alt={starship.name}
