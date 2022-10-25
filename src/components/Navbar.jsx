@@ -3,15 +3,28 @@ import logo from '../assets/images/star-wars-2.png';
 import '../styles/Navbar.css';
 import { NavLink, Link } from 'react-router-dom';
 
-export const Navbar = () => {
+export const Navbar = ({ validate, setValidate }) => {
     return (
         <div className="navbar">
             <div className="logo">
                 <img src={logo} alt="Logo Star Wars" />
                 <div className="sign">
-                    <Link to="/login" className="btn-login">
-                        LOG IN
-                    </Link>
+                    {validate === false ? (
+                        <Link to="/login" className="btn-login">
+                            LOG IN
+                        </Link>
+                    ) : (
+                        <Link
+                            to="/"
+                            className="btn-logout"
+                            onClick={() => {
+                                // localStorage.setItem('Logged', JSON.stringify(null));
+                                setValidate(false);
+                            }}
+                        >
+                            LOG OUT
+                        </Link>
+                    )}
                     <Link to="/signup" className="btn-signin">
                         SIGN UP
                     </Link>

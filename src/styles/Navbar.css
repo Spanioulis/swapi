@@ -5,11 +5,11 @@
 }
 
 .logo {
+    /* position: relative; */
+    background-color: rgba(0, 0, 0, 1);
+    border-bottom: 1px #A6A6A6 solid;
     display: flex;
     justify-content: center;
-    /* position: relative; */
-    border-bottom: 1px #A6A6A6 solid;
-    background-color: rgba(0, 0, 0, 1);
 }
 
 img {
@@ -84,13 +84,23 @@ img {
 }
 
 .btn-login {
-    color: #A6A6A6;
+    color: green;
     text-decoration: none;
 }
 
 .btn-login:hover {
-    color: green;
+    color: rgb(17, 185, 17);
     font-weight: bold;
+}
+
+.btn-logout {
+    color: maroon;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.btn-logout:hover {
+    color: orangered
 }
 
 .btn-signin {

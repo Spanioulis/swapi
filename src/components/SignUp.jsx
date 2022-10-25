@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/SignUp.css';
 
-export const SignUp = () => {
-    const [users, setUsers] = useState(localStorage.getItem('Users') || []);
+export const SignUp = ({ userList, setUserList }) => {
     const [form, setForm] = useState({
         firstName: '',
         lastName: '',
-        emailAddress: '',
+        email: '',
         password: ''
     });
+    const [error, setError] = useState('');
+    const [successfull, setSuccessfull] = useState('');
 
     const handleChangeInput = (event) => {
         const {
@@ -19,25 +20,32 @@ export const SignUp = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        const exists = users.find((user) => user.emailAddress === form.emailAddress);
+        const exists = userList.find((user) => user.email === form.email);
         if (exists) {
-            console.log('Existe este usuario');
+            setError('¡This user already exists!');
+            setTimeout(() => {
+                setError('');
+            }, 5000);
             return;
         } else {
-            setUsers([...users, form]);
-            console.log('usuario nuevo');
+            setSuccessfull('Registration has been successful.');
+            setUserList([...userList, form]);
+            setTimeout(() => {
+                setSuccessfull('');
+            }, 5000);
         }
+        event.target.reset();
     };
 
     useEffect(() => {
-        localStorage.setItem('Users', JSON.stringify(users));
-    }, [users]);
+        localStorage.setItem('Users', JSON.stringify(userList));
+    }, [userList]);
 
     return (
-        <div className="signin-container">
-            <form className="signin-card" onSubmit={handleSubmit}>
+        <div className="signup-container">
+            <form className="signup-card" onSubmit={handleSubmit}>
                 <input
-                    className="signin-input"
+                    className="signup-input"
                     type="text"
                     id="firstName"
                     name="firstName"
@@ -46,7 +54,7 @@ export const SignUp = () => {
                     required
                 />
                 <input
-                    className="signin-input"
+                    className="signup-input"
                     type="text"
                     id="lastName"
                     name="lastName"
@@ -55,17 +63,17 @@ export const SignUp = () => {
                     required
                 />
                 <input
-                    className="signin-input"
+                    className="signup-input"
                     type="email"
                     id="email"
-                    name="emailAddress"
+                    name="email"
                     placeholder="Email Address"
                     onChange={handleChangeInput}
                     required
                 />
-                {/* {exists && <p>Este usuario ya existe</p>} */}
+                {error === '' ? '' : <p className="error-signup">{error}</p>}
                 <input
-                    className="signin-input"
+                    className="signup-input"
                     type="password"
                     id="password"
                     name="password"
@@ -73,9 +81,10 @@ export const SignUp = () => {
                     onChange={handleChangeInput}
                     required
                 />
-                <button className="btn-signin-form" type="submit">
+                <button className="btn-signup-form" type="submit">
                     Create Account
                 </button>
+                {successfull === '' ? '' : <p className="successful-signup">{successfull}</p>}
             </form>
         </div>
     );

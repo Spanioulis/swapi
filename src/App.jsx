@@ -8,18 +8,44 @@ import { Starship } from './components/Starship';
 import { StarshipsList } from './components/StarshipsList';
 import { SignUp } from './components/SignUp';
 import { LogIn } from './components/LogIn';
+import { ProtectedRoute } from './components/ProtectedRoute';
+import { useState } from 'react';
 
 function App() {
+    const [user, setUser] = useState(JSON.parse(localStorage.getItem('Logged')) || null);
+    const [userList, setUserList] = useState(JSON.parse(localStorage.getItem('Users')) || []);
+    const [validate, setValidate] = useState(false);
+
     return (
         <BrowserRouter className="app">
-            <Navbar />
+            <Navbar validate={validate} setValidate={setValidate} />
             <Routes>
-                <Route path="/starships" element={<StarshipsList />} />
+                <Route
+                    path="/starships"
+                    element={
+                        <ProtectedRoute validate={validate}>
+                            <StarshipsList />
+                        </ProtectedRoute>
+                    }
+                />
                 <Route path="/starships/:id" element={<Starship />} />
-                <Route path="/signup" element={<SignUp />} />
-                <Route path="/login" element={<LogIn />} />
+                <Route
+                    path="/signup"
+                    element={<SignUp userList={userList} setUserList={setUserList} />}
+                />
+                <Route
+                    path="/login"
+                    element={
+                        <LogIn
+                            user={user}
+                            setUser={setUser}
+                            userList={userList}
+                            validate={validate}
+                            setValidate={setValidate}
+                        />
+                    }
+                />
                 <Route path="/" element={<Home />} />
-                {/* <Route index element={<LandingPage />} /> */}
             </Routes>
         </BrowserRouter>
     );
