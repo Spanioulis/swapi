@@ -5,7 +5,6 @@ import '../styles/StarshipList.css';
 
 export const StarshipsList = () => {
     let API_URL = 'https://swapi.dev/api/starships/';
-    // const API_URL = 'https://swapi.dev/api/starships/?page=2';
 
     const [starships, setStarships] = useState([]);
     const [url, setURL] = useState(API_URL);

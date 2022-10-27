@@ -7,16 +7,17 @@ const StarshipContainer = styled.div`
 
 const Card = styled.div`
     margin-top: 0.8rem;
-    width: 800px;
+    /* width: 800px; */
+    width: 700px;
 `;
 
 const Img = styled.img`
-    height: auto;
-    width: 100%;
     border-bottom: 3px brown solid;
     border-radius: 3px;
-    margin-bottom: 1.1rem;
     box-shadow: 1px 0px 50px -7px rgba(76, 52, 173, 0.78);
+    height: auto;
+    margin-bottom: 1.1rem;
+    width: 100%;
 `;
 
 const Title = styled.h1`
@@ -44,4 +45,34 @@ const InfoP = styled.p`
     margin-top: 1.1rem;
 `;
 
-export { StarshipContainer, Card, Img, Title, Section, Info, InfoP };
+const TitlePilots = styled.h1`
+    color: goldenrod;
+    text-align: center;
+    box-shadow: 0px 10px 20px -15px goldenrod;
+    margin-bottom: 1rem;
+`;
+
+const PilotContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    /* gap: 2rem; */
+`;
+/* justify-content: {${length} > 0}; */
+const PilotP = styled.p`
+    color: goldenrod;
+    margin-top: 0.4rem;
+    padding-left: 1.5rem;
+`;
+export {
+    StarshipContainer,
+    Card,
+    Img,
+    Title,
+    Section,
+    Info,
+    InfoP,
+    TitlePilots,
+    PilotContainer,
+    PilotP
+};

@@ -6,31 +6,29 @@ import {
     Img,
     Info,
     InfoP,
+    PilotContainer,
+    PilotP,
     Section,
     StarshipContainer,
-    Title
+    Title,
+    TitlePilots
 } from '../styles/Starship.styled';
 import notFound from '../assets/images/404NotFound.png';
+import { Pilots } from './Pilots';
 
 export const Starship = () => {
     let { id } = useParams();
-    // console.log('Props params: ', idStarship);
-    // console.log('Props params: ', param);
-    // const API_URL = `https://swapi.dev/api/starships/17/`;
     const API_URL = `https://swapi.dev/api/starships/${id}/`;
     const img = `https://starwars-visualguide.com/assets/img/starships/${id}.jpg`;
-    // console.log(img);
+    // TODO: crear JSON con la información de cada nave...
     const [starship, setStarship] = useState([]);
-    // console.log('🚀 ~ starship', starship);
+    const [pilots, setPilots] = useState([]);
 
     useEffect(() => {
-        // Llamar a la API
-        axios(API_URL)
-            // Obtener datos
-            .then(({ data }) => {
-                // console.log(data);
-                setStarship(data);
-            });
+        axios(API_URL).then(({ data }) => {
+            setStarship(data);
+            setPilots(data.pilots);
+        });
         window.scrollTo(0, 0);
     }, [API_URL]);
 
@@ -43,8 +41,6 @@ export const Starship = () => {
                     onError={(data) => {
                         data.target.onerror = null;
                         data.target.src = notFound;
-                        // data.target.src =
-                        // 'https://starwars-visualguide.com/assets/img/starships/9.jpg';
                     }}
                 />
                 <Title>{starship.name}</Title>
@@ -57,12 +53,27 @@ export const Starship = () => {
                 <Info>
                     <InfoP>Model: {starship.model}</InfoP>
                     <InfoP>Manufacturer: {starship.manufacturer}</InfoP>
-                    <InfoP>Cost in credits: {starship.cost_in_credits}</InfoP>
+                    <InfoP>Class: {starship.starship_class}</InfoP>
+                    <InfoP>Passengers: {starship.passengers}</InfoP>
+                    <InfoP>Cost in credits: {starship.cost_in_credits} credits</InfoP>
+                    <InfoP>Atmospheric Speed: {starship.max_atmosphering_speed}km/h</InfoP>
+                    <InfoP>MGLT: {starship.MGLT}</InfoP>
                     <InfoP>Length: {starship.length}m</InfoP>
-                    <InfoP>Atmospheric Speed: {starship.max_atmosphering_speed}mph</InfoP>
-                    <InfoP>Crew: {starship.crew}</InfoP>
+                    <InfoP>Cargo Capacity: {starship.cargo_capacity} metric tons</InfoP>
+                    <InfoP>Minimum crew: {starship.crew}</InfoP>
                 </Info>
-                <Info></Info>
+                <TitlePilots>Pilots</TitlePilots>
+                {/* CAMBIAR A TEXT-ALIGN CENTER si length = 1 */}
+                <PilotContainer length={pilots.length}>
+                    {pilots.length > 0 ? (
+                        pilots.map((url) => {
+                            const id = url.substring(29, url.length - 1);
+                            return <Pilots id={id} />;
+                        })
+                    ) : (
+                        <PilotP>This ship has no pilots, it is drifting...</PilotP>
+                    )}
+                </PilotContainer>
             </Card>
         </StarshipContainer>
     );
