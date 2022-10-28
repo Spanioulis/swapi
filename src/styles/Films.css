@@ -1,31 +1,29 @@
-.pilot-card {
+.film-card {
     /* background-size: 22em 30em; */
     /* box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.8); */
-    color: #2570a1;
     height: 400px;
     margin: 1rem 0 1rem 1rem;
     /* margin: auto; */
     overflow: hidden;
     position: relative;
     width: 47%;
-    /* opacity: 1; */
 }
 
-.pilot-card * {
+.film-card * {
     position: relative;
     z-index: 2;
 }
 
-.pilot-card:hover .color-overlay {
+.film-card:hover .color-overlay {
     background: rgb(0, 0, 0, 0.60);
 }
 
-.pilot-card:hover .info {
-    bottom: -10em;
+.film-card:hover .info {
+    bottom: -9.5em;
     opacity: 1;
 }
 
-.pilot-card,
+.film-card,
 .color-overlay {
     border-radius: 0.7em;
 }
@@ -36,7 +34,7 @@
     right: 0;
     bottom: 0;
     position: absolute;
-    transition: 0.7s background;
+    transition: 0.7s;
     background: #a6a6a6, 0.1;
     z-index: 1;
 }
@@ -48,11 +46,10 @@
     margin-top: 1.5em;
     font-size: 1.5rem;
     opacity: 1;
-    color: #a6a6a6;
 }
 
 .info {
-    align-items: center;
+    /* align-items: center; */
     background: transparent;
     color: #a6a6a6;
     display: flex;
@@ -63,4 +60,12 @@
     /* margin-top: 11rem; */
     opacity: 0;
     position: relative;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+.opening-crawl {
+    padding: 0 0 1rem 1rem;
 }

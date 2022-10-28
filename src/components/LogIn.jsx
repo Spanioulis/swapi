@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-// import { Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import '../styles/LogIn.css';
 
 export const LogIn = ({ user, setUser, userList, setValidate, validate }) => {
+    const navigate = useNavigate();
     const [error, setError] = useState('');
 
     const handleChangeInput = (event) => {
@@ -27,6 +28,7 @@ export const LogIn = ({ user, setUser, userList, setValidate, validate }) => {
                 localStorage.setItem('Logged', JSON.stringify(user));
                 setError('');
                 setValidate(true);
+                navigate('/starships');
 
                 // if (validate === true) {
                 //     console.log(validate);

@@ -3,18 +3,19 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import {
     Card,
+    Container,
     Img,
     Info,
     InfoP,
-    PilotContainer,
     PilotP,
     Section,
     StarshipContainer,
     Title,
     TitlePilots
-} from '../styles/Starship.styled';
+} from '../components/Starship.styled';
 import notFound from '../assets/images/404NotFound.png';
 import { Pilots } from './Pilots';
+import { Films } from './Films';
 
 export const Starship = () => {
     let { id } = useParams();
@@ -23,11 +24,13 @@ export const Starship = () => {
     // TODO: crear JSON con la información de cada nave...
     const [starship, setStarship] = useState([]);
     const [pilots, setPilots] = useState([]);
+    const [films, setFilms] = useState([]);
 
     useEffect(() => {
         axios(API_URL).then(({ data }) => {
             setStarship(data);
             setPilots(data.pilots);
+            setFilms(data.films);
         });
         window.scrollTo(0, 0);
     }, [API_URL]);
@@ -62,9 +65,10 @@ export const Starship = () => {
                     <InfoP>Cargo Capacity: {starship.cargo_capacity} metric tons</InfoP>
                     <InfoP>Minimum crew: {starship.crew}</InfoP>
                 </Info>
-                <TitlePilots>Pilots</TitlePilots>
+                <TitlePilots color="#daa520">Pilots</TitlePilots>
                 {/* CAMBIAR A TEXT-ALIGN CENTER si length = 1 */}
-                <PilotContainer length={pilots.length}>
+                {/* length={pilots.length} */}
+                <Container>
                     {pilots.length > 0 ? (
                         pilots.map((url) => {
                             const id = url.substring(29, url.length - 1);
@@ -73,7 +77,18 @@ export const Starship = () => {
                     ) : (
                         <PilotP>This ship has no pilots, it is drifting...</PilotP>
                     )}
-                </PilotContainer>
+                </Container>
+                <TitlePilots color="#2570a1">Films</TitlePilots>
+                <Container>
+                    {films.length > 0 ? (
+                        films.map((url) => {
+                            const id = url.substring(28, url.length - 1);
+                            return <Films url={url} id={id} />;
+                        })
+                    ) : (
+                        <p>This ship has no pilots, it is drifting...</p>
+                    )}
+                </Container>
             </Card>
         </StarshipContainer>
     );

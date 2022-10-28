@@ -14,7 +14,7 @@ const Card = styled.div`
 const Img = styled.img`
     border-bottom: 3px brown solid;
     border-radius: 3px;
-    box-shadow: 1px 0px 50px -7px rgba(76, 52, 173, 0.78);
+    box-shadow: 0px -5px 30px -7px rgba(76, 52, 173, 0.78);
     height: auto;
     margin-bottom: 1.1rem;
     width: 100%;
@@ -46,16 +46,17 @@ const InfoP = styled.p`
 `;
 
 const TitlePilots = styled.h1`
-    color: goldenrod;
+    color: ${(props) => props.color};
     text-align: center;
-    box-shadow: 0px 10px 20px -15px goldenrod;
-    margin-bottom: 1rem;
+    box-shadow: 0px 10px 20px -15px ${(props) => props.color};
+    /* margin-bottom: 1rem; */
 `;
 
-const PilotContainer = styled.div`
+const Container = styled.div`
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 2rem;
+    padding: 1.5rem;
     /* gap: 2rem; */
 `;
 /* justify-content: {${length} > 0}; */
@@ -73,6 +74,6 @@ export {
     Info,
     InfoP,
     TitlePilots,
-    PilotContainer,
-    PilotP
+    PilotP,
+    Container
 };
