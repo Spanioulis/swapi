@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import '../styles/StarshipList.css';
+import { Loading } from './Loading';
 
 export const StarshipsList = () => {
     let API_URL = 'https://swapi.dev/api/starships/';
@@ -9,6 +10,7 @@ export const StarshipsList = () => {
     const [starships, setStarships] = useState([]);
     const [url, setURL] = useState(API_URL);
     const [page, setPage] = useState(1);
+    const [loading, setLoading] = useState(true);
 
     const handleNext = (event) => {
         event.preventDefault();
@@ -25,13 +27,16 @@ export const StarshipsList = () => {
         // Llamar a la API
         axios(url)
             // Obtener datos
-            .then(({ data }) => {
-                // console.log(data.results);
-                setStarships(data.results);
+            .then((data) => {
+                console.log(data);
+                setStarships(data.data.results);
+                setLoading(false);
             });
     }, [url]);
 
-    return (
+    return loading ? (
+        <Loading />
+    ) : (
         <div className="starships-container">
             {starships.map((starship) => {
                 const id = starship.url.substring(32, starship.url.length);

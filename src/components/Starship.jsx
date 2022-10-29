@@ -78,7 +78,7 @@ export const Starship = () => {
                         <PilotP>This ship has no pilots, it is drifting...</PilotP>
                     )}
                 </Container>
-                <TitlePilots color="#2570a1">Films</TitlePilots>
+                <TitlePilots color="#3F3B6C">Films</TitlePilots>
                 <Container>
                     {films.length > 0 ? (
                         films.map((url) => {

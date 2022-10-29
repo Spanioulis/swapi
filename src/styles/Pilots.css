@@ -1,14 +1,10 @@
 .pilot-card {
-    /* background-size: 22em 30em; */
-    /* box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.8); */
     color: #2570a1;
     height: 400px;
     margin: 1rem 0 1rem 1rem;
-    /* margin: auto; */
     overflow: hidden;
     position: relative;
     width: 47%;
-    /* opacity: 1; */
 }
 
 .pilot-card * {
@@ -21,34 +17,34 @@
 }
 
 .pilot-card:hover .info {
-    bottom: -10em;
+    bottom: -9em;
     opacity: 1;
 }
 
 .pilot-card,
 .color-overlay {
-    border-radius: 0.7em;
+    border-radius: 10px;
 }
 
 .color-overlay {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    position: absolute;
-    transition: 0.7s background;
     background: #a6a6a6, 0.1;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.7s background;
     z-index: 1;
 }
 
 .title-box {
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-    margin-top: 1.5em;
-    font-size: 1.5rem;
-    opacity: 1;
     color: #a6a6a6;
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-top: 1.5em;
+    opacity: 1;
+    text-align: center;
+    width: 100%;
 }
 
 .info {
@@ -60,7 +56,6 @@
     font-size: 1.3rem;
     gap: 0.7rem;
     line-height: 1.1rem;
-    /* margin-top: 11rem; */
     opacity: 0;
     position: relative;
 }
