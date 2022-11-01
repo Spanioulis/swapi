@@ -37,7 +37,7 @@ export const Starship = () => {
 
     return (
         <StarshipContainer>
-            <Card>
+            <Card key="starship container">
                 <Img
                     src={img}
                     alt={starship.name}
