@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import { Pilots } from './Pilots';
+import { Films } from './Films';
+import notFound from '../assets/images/404NotFound.png';
 import {
     Card,
     Container,
@@ -13,9 +16,6 @@ import {
     Title,
     TitlePilots
 } from '../components/Starship.styled';
-import notFound from '../assets/images/404NotFound.png';
-import { Pilots } from './Pilots';
-import { Films } from './Films';
 
 export const Starship = () => {
     let { id } = useParams();
@@ -66,8 +66,6 @@ export const Starship = () => {
                     <InfoP>Minimum crew: {starship.crew}</InfoP>
                 </Info>
                 <TitlePilots color="#daa520">Pilots</TitlePilots>
-                {/* CAMBIAR A TEXT-ALIGN CENTER si length = 1 */}
-                {/* length={pilots.length} */}
                 <Container>
                     {pilots.length > 0 ? (
                         pilots.map((url) => {

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import '../styles/StarshipList.css';
 import { Loading } from './Loading';
+import '../styles/StarshipList.css';
 
 export const StarshipsList = () => {
     let API_URL = 'https://swapi.dev/api/starships/';
@@ -24,14 +24,10 @@ export const StarshipsList = () => {
     };
 
     useEffect(() => {
-        // Llamar a la API
-        axios(url)
-            // Obtener datos
-            .then((data) => {
-                console.log(data);
-                setStarships(data.data.results);
-                setLoading(false);
-            });
+        axios(url).then((data) => {
+            setStarships(data.data.results);
+            setLoading(false);
+        });
     }, [url]);
 
     return loading ? (
@@ -58,7 +54,6 @@ export const StarshipsList = () => {
             })}
 
             <div className="btn-container">
-                {/* DISSABLED */}
                 {page > 1 ? (
                     <button className="btn" onClick={handlePrev}>
                         Prev

@@ -65,3 +65,18 @@ h3 {
     padding: 0 0 1rem 1.2rem;
     text-align: justify;
 }
+
+@media (max-width: 576px) {
+    .film-card {
+        height: 350px;
+        width: 90%;
+    }
+
+    .info {
+        height: 350px;
+    }
+
+    .color-overlay {
+        height: 350px;
+    }
+}

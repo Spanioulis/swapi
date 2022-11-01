@@ -24,16 +24,10 @@ export const LogIn = ({ user, setUser, userList, setValidate, validate }) => {
 
         if (exists !== undefined) {
             if (exists.password === user.password) {
-                console.log('Log in correcto: ', user);
                 localStorage.setItem('Logged', JSON.stringify(user));
                 setError('');
                 setValidate(true);
                 navigate('/starships');
-
-                // if (validate === true) {
-                //     console.log(validate);
-                //     return <Navigate to="/" />;
-                // }
                 return;
             }
             setError('You have entered an invalid e-mail or password.');

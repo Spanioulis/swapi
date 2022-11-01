@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import '../styles/Pilots.css';
 import axios from 'axios';
-// import { useParams } from 'react-router-dom';
+import '../styles/Pilots.css';
 
 export const Pilots = ({ id }) => {
     const API_URL = `https://swapi.dev/api/people/${id}`;

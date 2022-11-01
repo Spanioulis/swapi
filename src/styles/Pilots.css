@@ -59,3 +59,20 @@
     opacity: 0;
     position: relative;
 }
+
+@media (max-width: 992px) {
+    .title-box {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .pilot-card {
+        height: 350px;
+        width: 90%;
+    }
+
+    .info {
+        height: 350px;
+    }
+}

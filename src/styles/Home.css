@@ -3,7 +3,6 @@
     background-size: cover;
     background-position: initial;
     background-attachment: scroll;
-    /* background-attachment: fixed; */
     align-items: center;
     display: flex;
     justify-content: center;
@@ -21,14 +20,21 @@
     font-size: 1rem;
     gap: 1rem;
     justify-content: center;
+    padding: 0.7rem;
+    position: fixed;
     text-decoration: none;
     transition: all 150ms ease-in-out;
     width: 200px;
-    padding: 0.7rem;
-    position: fixed;
 }
 
 .btn-home:hover {
     box-shadow: 0 0 10px 0 antiquewhite inset, 0 0 10px 4px antiquewhite;
     color: white;
+}
+
+@media (max-width: 576px) {
+    .btn-home {
+        font-size: 0.8rem;
+        width: 125px;
+    }
 }

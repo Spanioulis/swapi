@@ -1,6 +1,4 @@
-// import { LandingPage } from './components/LandingPage';
-//! Sin uso de momento...
-import './App.css';
+import { useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Home } from './components/Home';
 import { Navbar } from './components/Navbar';
@@ -9,7 +7,7 @@ import { StarshipsList } from './components/StarshipsList';
 import { SignUp } from './components/SignUp';
 import { LogIn } from './components/LogIn';
 import { ProtectedRoute } from './components/ProtectedRoute';
-import { useState } from 'react';
+import './App.css';
 
 function App() {
     const [user, setUser] = useState(JSON.parse(localStorage.getItem('Logged')) || null);

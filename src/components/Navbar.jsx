@@ -1,7 +1,7 @@
 import React from 'react';
+import { NavLink, Link } from 'react-router-dom';
 import logo from '../assets/images/star-wars-2.png';
 import '../styles/Navbar.css';
-import { NavLink, Link } from 'react-router-dom';
 
 export const Navbar = ({ validate, setValidate }) => {
     return (
@@ -18,26 +18,23 @@ export const Navbar = ({ validate, setValidate }) => {
                             to="/"
                             className="btn-logout"
                             onClick={() => {
-                                // localStorage.setItem('Logged', JSON.stringify(null));
                                 setValidate(false);
                             }}
                         >
                             LOG OUT
                         </Link>
                     )}
-                    <Link to="/signup" className="btn-signin">
+                    <Link to="/signup" className="btn-signup">
                         SIGN UP
                     </Link>
                 </div>
             </div>
             <div className="nav-link">
-                {/* Idea: ¿className .active-home?? */}
                 <Link to="/" className="inactive-link">
                     HOME
                 </Link>
                 <NavLink
                     className={({ isActive }) => (isActive === true ? 'active' : 'inactive')}
-                    // activeClassName={({ isActive }) => (isActive === true ? 'active' : 'inactive')}
                     to="/starships"
                     end
                 >

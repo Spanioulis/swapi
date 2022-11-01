@@ -13,16 +13,11 @@ export const Films = ({ id, url }) => {
     }, [url]);
 
     return (
-        <>
-            <div
-                key={film.title}
-                className="film-card"
-                style={{ backgroundImage: `url(${IMG_SRC})` }}
-            >
+        <div key={film.title}>
+            <div className="film-card" style={{ backgroundImage: `url(${IMG_SRC})` }}>
                 <div className="title-box">
                     <h3>{film.title}</h3>
                 </div>
-                {/* <img src={img} alt={film.name} /> */}
                 <div className="info">
                     <p>
                         <b>Episode</b>: {film.episode_id}
@@ -37,6 +32,6 @@ export const Films = ({ id, url }) => {
                 <div className="color-overlay"></div>
             </div>
             <div className="opening-crawl">{film.opening_crawl}</div>
-        </>
+        </div>
     );
 };
