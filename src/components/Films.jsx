@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import '../styles/Films.css';
 
 export const Films = ({ id, url }) => {
@@ -7,9 +7,12 @@ export const Films = ({ id, url }) => {
     const IMG_SRC = `https://starwars-visualguide.com/assets/img/films/${id}.jpg`;
 
     useEffect(() => {
-        axios(url).then(({ data }) => {
-            setFilm(data);
-        });
+        // axios(url).then(({ data }) => {
+        //     setFilm(data);
+        // });
+        fetch(url)
+            .then((data) => data.json())
+            .then((data) => setFilm(data));
     }, [url]);
 
     return (

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import '../styles/Pilots.css';
 
 export const Pilots = ({ id }) => {
@@ -8,9 +8,11 @@ export const Pilots = ({ id }) => {
     const [pilot, setPilot] = useState([]);
 
     useEffect(() => {
-        axios(API_URL).then(({ data }) => {
-            setPilot(data);
-        });
+        fetch(API_URL)
+            .then((data) => data.json())
+            .then((data) => {
+                setPilot(data);
+            });
     }, [API_URL, setPilot]);
 
     return (

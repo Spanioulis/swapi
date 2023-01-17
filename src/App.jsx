@@ -15,7 +15,7 @@ function App() {
     const [validate, setValidate] = useState(false);
 
     return (
-        <BrowserRouter className="app">
+        <>
             <Navbar validate={validate} setValidate={setValidate} />
             <Routes>
                 <Route
@@ -45,7 +45,7 @@ function App() {
                 />
                 <Route path="/" element={<Home />} />
             </Routes>
-        </BrowserRouter>
+        </>
     );
 }
 

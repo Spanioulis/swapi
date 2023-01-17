@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { Loading } from './Loading';
 import '../styles/StarshipList.css';
@@ -23,11 +23,20 @@ export const StarshipsList = () => {
         setURL(`https://swapi.dev/api/starships/?page=${page - 1}`);
     };
 
+    //TODO -> Cambiar axios.then por fecth.then.then
     useEffect(() => {
-        axios(url).then((data) => {
-            setStarships(data.data.results);
-            setLoading(false);
-        });
+        // axios(url).then((data) => {
+        //     setStarships(data.data.results);
+        //     console.log(data.data.results);
+        //     setLoading(false);
+        // });
+        fetch(url)
+            .then((data) => data.json())
+            .then((data) => {
+                setStarships(data.results);
+                // console.log(data.results);
+                setLoading(false);
+            });
     }, [url]);
 
     return loading ? (
