@@ -67,6 +67,12 @@ As for specific goals, they are using axios with useEffect, running tests with J
   <a href="https://beta.reactjs.org/">
     <img src="https://skillicons.dev/icons?i=react" alt="React JS Logo" />
   </a>
+  <a href="https://jestjs.io/es-ES/">
+    <img src="https://skillicons.dev/icons?i=jest" alt="Jest Logo"/>
+  </a>
+  <a href="https://styled-components.com/">
+    <img src="https://skillicons.dev/icons?i=styledcomponents" />
+  </a>
   <a href="https://code.visualstudio.com/">
     <img src="https://skillicons.dev/icons?i=vscode" alt="VSC Logo"/>
   </a>
@@ -75,12 +81,6 @@ As for specific goals, they are using axios with useEffect, running tests with J
   </a></br>
   <a href="https://axios-http.com/">
     <img src="https://user-images.githubusercontent.com/97700906/213815250-71e953d8-c11d-448a-b620-7224766c55bd.svg" alt="Axios Logo"/>
-  </a>
-  <a href="https://jestjs.io/es-ES/">
-    <img src="https://user-images.githubusercontent.com/97700906/213815876-63796ef2-89d9-40b5-bf89-95b09bb12cdb.png" alt="Jest Logo"/>
-  </a>
-  <a href="https://styled-components.com/">
-    <img src="https://user-images.githubusercontent.com/97700906/213816904-30f17f07-3b23-45b6-9888-95b9d15bbd98.png" alt="Styled Components Logo"/>
   </a>
 </p>
 
