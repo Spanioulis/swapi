@@ -10,7 +10,6 @@
  </h3>
 </div>
 
-	@@ -29,35 +30,19 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
@@ -46,7 +45,6 @@ As for specific goals, they are using axios with useEffect, running tests with J
 - How to use [Styled components](https://styled-components.com/)
 
 ### Technologies used:
-	@@ -67,8 +52,8 @@ As for specific goals, they are using axios with useEffect, running tests with J
   <a href="https://beta.reactjs.org/">
     <img src="https://skillicons.dev/icons?i=react" alt="React JS Logo" />
   </a>
@@ -55,7 +53,6 @@ As for specific goals, they are using axios with useEffect, running tests with J
   </a>
   <a href="https://styled-components.com/">
     <img src="https://skillicons.dev/icons?i=styledcomponents" />
-	@@ -79,22 +64,19 @@ As for specific goals, they are using axios with useEffect, running tests with J
   <a href="https://git-scm.com/">
     <img src="https://skillicons.dev/icons?i=git" alt="Git Logo"/>
   </a></br>
