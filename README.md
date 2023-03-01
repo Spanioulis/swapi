@@ -1,12 +1,13 @@
 <!-- PROJECT LOGO -->
 <div align="center">
-  <a href="https://swapi-spanioulis.netlify.app/" target="_blank" rel="noopener noreferrer">
-    <img src="https://user-images.githubusercontent.com/97700906/213819982-8c601aea-dde7-4153-af30-832dd0b3baae.png" alt="Logo" width="50" height="50">
+  <a href="https://hangman-game-1ce0a.web.app/" target="_blank" rel="noopener noreferrer">
+    <img src="https://user-images.githubusercontent.com/97700906/222259336-91dfb98a-e51f-49b6-a2aa-133e7e3d1aa9.png" alt="Logo" width="50" height="50">
   </a>
-  <h1 align="center">SWAPI</h1>
+  <h1 align="center">Hangman Game</h1>
+
 
  <h3 align="left">
-   View Demo <a href="https://swapi-spanioulis.netlify.app/">here</a>
+   View Demo <a href="https://hangman-game-1ce0a.web.app/">here</a>
  </h3>
 </div>
 
@@ -29,35 +30,19 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-SWAPI is sprint number 8 (third of React) of the [IT Academy](https://www.barcelonactiva.cat/es/itacademy) (Barcelona) ReactJS Bootcamp itinerary.
-
-The general objective of this exercise is to learn how to consume data from an API - [Star Wars](https://swapi.dev/) - in React, and understand what unit tests are and how to implement them.
-
-As for specific goals, they are using axios with useEffect, running tests with Jest, and learning how to use react-testing-libray.
+Hangman Game is a project made with React & Typescript. The objective of it was to continue improving in React and start delving into Typescript. It used styled-components for styles. The project has been created in Vite and the deployment in Firebase Hosting.
 
 
 <div align="center"></br>
-  <img src="https://user-images.githubusercontent.com/97700906/213812271-877205bd-a0eb-4937-96ac-5ebe4bff8abe.gif" alt="Logo" width="100%" height="100%">
-  <p align="center">Login & Signup (demo)</p></br>
-  <img src="https://user-images.githubusercontent.com/97700906/213811084-9d60694b-33db-41a9-9506-6f180674c1ed.gif" alt="Logo" width="100%" height="100%">
-  <p align="center">Starships (demo)</p></br>
-  <img src="https://user-images.githubusercontent.com/97700906/213809578-223a3280-5bd6-4a6e-b7e9-87da80e77982.png" alt="Logo" width="100%" height="100%">
-  <p align="center">Home</p></br>
-  <img src="https://user-images.githubusercontent.com/97700906/213809922-9c64fa5a-a166-43e7-be94-a196bfb2cacc.png" alt="Logo" width="100%" height="100%">
-  <p align="center">Login</p></br>
-  <img src="https://user-images.githubusercontent.com/97700906/213809982-68a397ac-2974-45fc-95da-66fcbcfc0933.png" alt="Logo" width="100%" height="100%">
-  <p align="center">Signin</p></br>
+  <img src="https://user-images.githubusercontent.com/97700906/222248468-61ae9af0-95f1-46b0-8c3c-d5489ad62e78.gif" alt="Logo" width="100%" height="100%">
+  <p align="center">Demo</p></br>
 </div>
 
 
 
 ## Goals for this project:
 
-- How to use [useEffect](https://beta.reactjs.org/reference/react/useEffect)
-- How to use [Axios](https://axios-http.com/)
-- How to use [Jest](https://jestjs.io/es-ES/)
-- How to use [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
-- How to use [SWAPI](https://swapi.dev/)
+- How to use [TypeScript](https://www.typescriptlang.org/)
 - How to use [Styled components](https://styled-components.com/)
 
 ### Technologies used:
@@ -67,8 +52,8 @@ As for specific goals, they are using axios with useEffect, running tests with J
   <a href="https://beta.reactjs.org/">
     <img src="https://skillicons.dev/icons?i=react" alt="React JS Logo" />
   </a>
-  <a href="https://jestjs.io/es-ES/">
-    <img src="https://skillicons.dev/icons?i=jest" alt="Jest Logo"/>
+    <a href="https://www.typescriptlang.org/">
+    <img src="https://skillicons.dev/icons?i=typescript" alt="TypeScript JS Logo" />
   </a>
   <a href="https://styled-components.com/">
     <img src="https://skillicons.dev/icons?i=styledcomponents" />
@@ -79,16 +64,13 @@ As for specific goals, they are using axios with useEffect, running tests with J
   <a href="https://git-scm.com/">
     <img src="https://skillicons.dev/icons?i=git" alt="Git Logo"/>
   </a></br>
-  <a href="https://axios-http.com/">
-    <img src="https://user-images.githubusercontent.com/97700906/213815250-71e953d8-c11d-448a-b620-7224766c55bd.svg" alt="Axios Logo"/>
-  </a>
+
 </p>
 
 - ReactJS (useEffect)
-- Axios
-- Jest & React Testing Library
+- TypeScript
 - Styled Components
-- Create React App
+- Vite
 
 
 <!-- CONTACT -->
@@ -96,5 +78,5 @@ As for specific goals, they are using axios with useEffect, running tests with J
 
 Spanioulis (Sergio Paniagua Sánchez) - [Linkedin](https://www.linkedin.com/in/sergio-paniagua-sanchez/) - pani77sps@gmail.com
 
-Project Link: [https://github.com/Spanioulis/app-book-released](https://github.com/Spanioulis/app-book-released)
+Project Link: [https://github.com/Spanioulis/hangman-game](https://github.com/Spanioulis/hangman-game)
 
